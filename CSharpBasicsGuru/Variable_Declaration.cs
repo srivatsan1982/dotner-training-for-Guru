@@ -6,25 +6,32 @@ using System.Threading.Tasks;
 
 namespace CSharp
 {
+    class Constants
+    {
+        public const string x = "a";
+    }
+
     class Variable_Declaration
-    { /*Variable Declaration
-            * <access specifier> <data type> <variable name>
-            */
-        const string x = "a";
+    { 
+      /*Variable Declaration
+        * <access specifier> <access modifier> <data type> <variable name>
+      */
+        
         static int a;
         static long b;
         static float c;
         static double d;
         static decimal Dec;
-
+        
         static void Main(string[] args) {
-           
-       
-            string anju123;
+
+            Console.WriteLine(Constants.x);
+
+            string guru123;
             /*Assignment Operator
              * variable = value
              */
-            anju123 = args[0];
+            guru123 = args[0];
             
             //Implicit Converter
             b = 10;
@@ -43,7 +50,7 @@ namespace CSharp
             Console.WriteLine(c);
             Console.WriteLine(d);
             Console.WriteLine(Dec);
-            Console.WriteLine(anju123);
+            Console.WriteLine(guru123);
             Console.ReadLine();
         }
     }
