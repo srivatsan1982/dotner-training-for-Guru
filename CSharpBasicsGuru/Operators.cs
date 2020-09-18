@@ -53,111 +53,114 @@ namespace CSharp
              * https://www.tutorialspoint.com/csharp/csharp_decision_making.htm*/
 
             //if..else
-            //int a = 10;
+            int a = 10;
 
-            //if (a > 0)
-            //{
-            //    Console.WriteLine("a is a positive number");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("a is a negetive number");
-            //}
+            if (a > 0)
+            {
+                Console.WriteLine("a is a positive number");
+            }
+            else
+            {
+                Console.WriteLine("a is a negetive number");
+            }
 
-            //int age = 100;
-            //if (age >= 18 && age <= 99)
-            //{
-            //    Console.WriteLine("Elegible to vote");
-            //}
-            //else if (age <= 18)
-            //{
-            //    Console.WriteLine("Not Elegible");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Not Elegible to vote");
-            //}
+            int age = 100;
+            if (age >= 18 && age <= 99)
+            {
+                Console.WriteLine("Elegible to vote");
+            }
+            else if (age <= 18)
+            {
+                Console.WriteLine("Not Elegible");
+            }
+            else
+            {
+                Console.WriteLine("Not Elegible to vote");
+            }
 
             ////Switch Case
-            //int s = 12;//int.Parse(Console.ReadLine());
+            int s = 0;//int.Parse(Console.ReadLine());
+        GET_INFO:
+            if (!int.TryParse(Console.ReadLine(), out s))
+                goto GET_INFO;
 
-            //switch (s)
-            //{
-            //    case 12:
-            //        Console.WriteLine("Dozen");
-            //        break;
-            //    case 6:
-            //        Console.WriteLine("Half Dozen");
-            //        break;
-            //    case 24:
-            //        Console.WriteLine("Two Dozen");
-            //        break;
-            //    default:
-            //        Console.WriteLine("Default");
-            //        break;
-            //}
+            switch (s)
+            {
+                case 12:
+                    Console.WriteLine("Dozen");
+                    break;
+                case 6:
+                    Console.WriteLine("Half Dozen");
+                    break;
+                case 24:
+                    Console.WriteLine("Two Dozen");
+                    break;
+                default:
+                    Console.WriteLine("Default");
+                    break;
+            }
 
             ////Multiple Switch Case
-            //int ss = 12;
-            //switch (ss)
-            //{
-            //    case 6:
-            //    case 12:
-            //        Console.WriteLine("Half Dozen or Dozen");
-            //        break;
-            //    case 24:
-            //    case 36:
-            //        Console.WriteLine("Two Dozen or Three Dozen ");
-            //        break;
-            //    default:
-            //        Console.WriteLine("Default");
-            //        break;
-            //}
+            int ss = 12;
+            switch (ss)
+            {
+                case 6:
+                case 12:
+                    Console.WriteLine("Half Dozen or Dozen");
+                    break;
+                case 24:
+                case 36:
+                    Console.WriteLine("Two Dozen or Three Dozen ");
+                    break;
+                default:
+                    Console.WriteLine("Default");
+                    break;
+            }
 
             ////Ternary or Conditional Operator
 
-            //string var; age = 19;
-            //var = ((age > 18) && (age < 99)) ? "valid" : "Not Valid";
-            //Console.WriteLine("The Given age is {0} age ", var);
+            string var; age = 19;
+            var = ((age > 18) && (age < 99)) ? "valid" : "Not Valid";
+            Console.WriteLine("The Given age is {0} age ", var);
 
             /***Getting Input from the Console Window***/
 
             //int a = Console.Read();
             //string str = Console.ReadLine();
 
-            //int a, b, choice;
-            //Console.Write("Enter the First Number:");
+            int b, choice;
+            Console.Write("Enter the First Number:");
 
-            //a = int.Parse(Console.ReadLine());
-            //Console.Write("Enter the Second Number:");
-            //b = int.Parse(Console.ReadLine());
+            a = int.Parse(Console.ReadLine());
+            Console.Write("Enter the Second Number:");
+            b = int.Parse(Console.ReadLine());
 
-            //Console.WriteLine("Press 1 to perform a^2 + b^2");
-            //Console.WriteLine("Press 2 to perform (a + b)^2");
-            //Console.WriteLine("Press 3 to perform (a - b)^2");
-            //Console.Write("Enter your choice:");
+            Console.WriteLine("Press 1 to perform a^2 + b^2");
+            Console.WriteLine("Press 2 to perform (a + b)^2");
+            Console.WriteLine("Press 3 to perform (a - b)^2");
+            Console.Write("Enter your choice:");
 
-            //choice = int.Parse(Console.ReadLine());
+            choice = int.Parse(Console.ReadLine());
 
-            //switch (choice)
-            //{
-            //    case (int)Choice.ASquarePlusBSquare:
-            //        Console.WriteLine("The result of {0}^2 + {1}^2 is : {2}", a, b, ((a + b) * (a - b)));
-            //        break;
-            //    case (int)Choice.APlusBWholeSquare:
-            //        Console.WriteLine("The result of {0}^2 + {1}^2 is : {2}", a, b, ((a ^ 2 + b ^ 2 + (2 * a * b))));
-            //        break;
-            //    case (int)Choice.AMinusBWholeSquare:
-            //        Console.WriteLine("The result of {0}^2 - {1}^2 is : {2}", a, b, ((a ^ 2 + b ^ 2 - (2 * a * b))));
-            //        break;
-            //    default:
-            //        Console.WriteLine("Select a valid choice");
-            //        break;
-            //}
+            switch (choice)
+            {
+                case (int)Choice.ASquarePlusBSquare:
+                    Console.WriteLine("The result of {0}^2 + {1}^2 is : {2}", a, b, ((a + b) * (a - b)));
+                    break;
+                case (int)Choice.APlusBWholeSquare:
+                    Console.WriteLine("The result of {0}^2 + {1}^2 is : {2}", a, b, ((a ^ 2 + b ^ 2 + (2 * a * b))));
+                    break;
+                case (int)Choice.AMinusBWholeSquare:
+                    Console.WriteLine("The result of {0}^2 - {1}^2 is : {2}", a, b, ((a ^ 2 + b ^ 2 - (2 * a * b))));
+                    break;
+                default:
+                    Console.WriteLine("Select a valid choice");
+                    break;
+            }
 
-            //Console.WriteLine((int)Colors.Red);
-            //Console.WriteLine((int)Colors.Blue);
-            //Console.WriteLine((int)Colors.Green);
+            Console.WriteLine((int)Colors.Red);
+            Console.WriteLine((int)Colors.Blue);
+            Console.WriteLine((int)Colors.Green);
 
             //Pre-Increment and Post increment.
             int i = 10;
