@@ -1,0 +1,17 @@
+A Function is defined as a piece of code for specific purpose.
+A Function may or may not return a value.
+Functions which do not return a value are called sub-routines.
+Function uses the return statement to return a data.
+The following is the declaration of the function:
+<Access Specifier> Optional<Access Modifier> <Return Type> Function_Name(parameters)
+{
+	Function Body
+}
+A Function is used to define the behaviour of the class.
+In case of Calculator:
+A,B,C are all fields which take input.
+Add(),Mul(),Subract()=> The behaviours which act upon the data.
+
+Types of Parameters:
+Input Parameters = Used to take Input data.
+Out Parameters	 = Used to output multiple results from a function.
