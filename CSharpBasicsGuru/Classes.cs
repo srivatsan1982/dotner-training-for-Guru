@@ -26,9 +26,10 @@ namespace CSharpBasics
             set { b = value; }
         }
 
-        //public Calculator()
-        //{
-        //}
+        public Calculator()
+        {
+
+        }
 
         public Calculator(int a, int b)
         {
@@ -45,15 +46,18 @@ namespace CSharpBasics
             Console.ReadLine();
         }
         /// <summary>
-        /// To perfor Addition
+        /// To perform Addition
         /// </summary>
         /// <returns></returns>
-        public int Add()
+        private int Add()
         {
             return (this.A + this.B);
 
         }
-
+        public int AddPublic()
+        {
+            return Add();
+        }
         /// <summary>
         /// To do substraction
         /// </summary>
@@ -111,28 +115,45 @@ namespace CSharpBasics
             Console.WriteLine("For {0} press {1}", CalculatorEnum.Division.ToString(), (int)CalculatorEnum.Division);
 
             //int choice = int.Parse(Console.ReadLine());
-           
-            int choice = (int)Enum.Parse(typeof(CalculatorEnum), "addition", true);
-
+            CalculatorEnum choice = (CalculatorEnum)Enum.Parse(typeof(CalculatorEnum), Console.ReadLine(), true);
             switch (choice)
             {
-                case (int)CalculatorEnum.Addition:
-                    Console.WriteLine("Addition:{0}", objCalc.Add());
+                case CalculatorEnum.Addition:
+                    Console.WriteLine("Addition:{0}", objCalc.AddPublic());
                     break;
-                case (int)CalculatorEnum.Substraction:
+                case CalculatorEnum.Substraction:
                     Console.WriteLine("Substraction:{0}", objCalc.Substraction());
                     break;
-                case (int)CalculatorEnum.Multiplication:
+                case CalculatorEnum.Division:
                     Console.WriteLine("Multiplication:{0}", objCalc.Multiplication());
                     break;
-                case (int)CalculatorEnum.Division:
+                case CalculatorEnum.Multiplication:
                     Console.WriteLine("Division:{0}", objCalc.Division());
                     break;
-
                 default:
                     Console.WriteLine("Please check the choice again");
                     break;
             }
+
+            //switch (choice)
+            //{
+            //    case (int)CalculatorEnum.Addition:
+            //        Console.WriteLine("Addition:{0}", objCalc.Add());
+            //        break;
+            //    case (int)CalculatorEnum.Substraction:
+            //        Console.WriteLine("Substraction:{0}", objCalc.Substraction());
+            //        break;
+            //    case (int)CalculatorEnum.Multiplication:
+            //        Console.WriteLine("Multiplication:{0}", objCalc.Multiplication());
+            //        break;
+            //    case (int)CalculatorEnum.Division:
+            //        Console.WriteLine("Division:{0}", objCalc.Division());
+            //        break;
+
+            //    default:
+            //        Console.WriteLine("Please check the choice again");
+            //        break;
+            //}
             Console.ReadKey();
         }
     }
