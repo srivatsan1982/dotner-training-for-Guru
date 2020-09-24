@@ -12,12 +12,16 @@ namespace CSharp
         //<Access Specifier> <Return Type> <Function Name>(<parameters>)
         public void Add(int a, int b)
         {
-            Console.WriteLine("The addition of{0} and {1} is {2}", a, b, a + b);
+            Console.WriteLine("The addition of {0} and {1} is {2}", a, b, a + b);
         }
 
         public void Add(string a, string b)
         {
-            Console.WriteLine("The addition of{0} and {1} is {2}", a, b, a + b);
+            Console.WriteLine("The concatenation of {0} and {1} is {2}", a, b, a + b);
+        }
+        public void Add(decimal a, decimal b)
+        {
+            Console.WriteLine("The concatenation of {0} and {1} is {2}", a, b, a + b);
         }
 
         public void Message()
@@ -40,10 +44,10 @@ namespace CSharp
             var3++;
         }
 
-        //	OUT Parameter(if u want to return more than one value use out parameter	
+        //	OUT Parameter(if u want to return more than one value use out parameter)
         public static int add(int var1, int var2, out int result, out string stringResult)
         {
-            stringResult = "";
+            stringResult = "Guru";
             result = var1 - var2;
             return var1 + var2;
 
@@ -55,7 +59,9 @@ namespace CSharp
             Functions objFunctions;
             objFunctions = new Functions();
 
+            objFunctions.Message();
             objFunctions.Add(10, 20);
+            objFunctions.Add("Srivatsan", "Seshadri");
             int y = objFunctions.Sum(10, 20);
 
             Console.WriteLine("The sum of {0} and {1} is {2}", 10, 20, objFunctions.Sum(10, 20));

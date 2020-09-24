@@ -21,6 +21,10 @@ namespace CSharp
         public string MiddleName;
         public string LastName;
         public DateTime DOB;
+        public Employee GetEmployee()
+        {
+            return new Employee();
+        }
     }
 
     class Structures
@@ -32,11 +36,12 @@ namespace CSharp
 
         public static void Main(string[] args)
         {
+            //Employee employee1 = new Employee(1, "Guru", "", "Guru", new DateTime());
             //Employee emp1 = new Employee(1, "Anju", "", "Singh", new DateTime(2000, 6, 1));
 
             //Employee emp2 = new Employee(2, "Bhoomi","", "Patel", new DateTime(2000, 6, 1));
 
-            Employee[] emp = new Employee[1];
+            Employee[] emp = new Employee[2];
             for (int i = 0; i < emp.Length; i++)
             {
                 Console.WriteLine("Enter the details for Employee{0}", i + 1);
@@ -58,6 +63,7 @@ namespace CSharp
                 //    employee.EmployeeId, employee.FirstName, employee.MiddleName, employee.LastName, employee.DOB.ToShortDateString()));
                 Display(employee.EmployeeId, employee.FirstName, employee.MiddleName, employee.LastName, employee.DOB.ToShortDateString());
             }
+            Console.ReadLine();
         }
     }
 }

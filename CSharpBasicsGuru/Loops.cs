@@ -25,22 +25,24 @@ namespace CSharp
 
             //Console.Write("Enter the number till which you want to get the even numbers:");
             //int a = int.Parse(Console.ReadLine());
-            //int i = 0;
+            //i = 0;
             //while (i <= a)
             //{
             //    if ((i % 2) == 0)
             //        Console.WriteLine("{0} is an even number", i);
             //    i += 1;
             //}
-            //int  i = 10;
-            // //Do
-            // do
-            // {
-            //     Console.WriteLine("Value of i: {0}", i);
-            //     i--;
-            // } while (i != 10);
+            //i = 10;
+            ////Do
+            //do
+            //{
+            //    if (i < 0)
+            //        break;
+            //    Console.WriteLine("Value of i: {0}", i);
+            //    i--;
+            //} while (i != 10);
 
-            //for (int a = 0; a <= 10; a++)
+            //for (a = 0; a <= 10; a++)
             //{
             //    Console.WriteLine(a);
             //}
@@ -67,10 +69,6 @@ namespace CSharp
             //    Console.WriteLine("Value in {0} index is {1}", ix, array[ix]);
             //}
 
-            //foreach (int item in array)
-            //{
-            //    Console.WriteLine("Value : {0}", item);
-            //}
             //////foreach
             //foreach (var item in array)
             //{
