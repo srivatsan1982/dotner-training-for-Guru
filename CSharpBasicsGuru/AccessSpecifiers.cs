@@ -17,189 +17,190 @@ namespace CSharp
 			
     */
 
-    //    class Student
-    //    {
-    //        /// <summary>
-    //        /// The main entry point for the application.
-    //        /// </summary>
+    class Student
+    {
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
 
-    //        string name;
+        string name;
 
-    //        public void Assign_dtls()
-    //        {
-    //            name = "John Joseph";
+        public void Assign_dtls()
+        {
+            name = "John Joseph";
 
-    //        }
+        }
 
-    //        public void disp()
-    //        {
-    //            Console.WriteLine("Name of the Student is {0}", name);
+        internal void disp()
+        {
+            Console.WriteLine("Name of the Student is {0}", name);
 
-    //        }
+        }
 
-    //        //By default This is a private method so we can't access the method outside the class.
-    //        internal void display()
-    //        //private void display()
-    //        {
-    //            Console.WriteLine("Name of the Student is {0}", name);
+        //By default This is a private method so we can't access the method outside the class.
+        //internal void display()
+        protected void display()
+        {
+            Console.WriteLine("Name of the Student is {0}", name);
 
-    //        }
+        }
 
-    //        //[STAThread]
-    //        private static void Main(string[] args)
-    //        {
-    //            Student stu = new Student();
-    //            stu.Assign_dtls();
-    //            stu.disp();
-    //            stu.display();
-    //            //with in the class it will work but outside the class it will not work because it is private.
-    //        }
-    //    }
-
-
-
-    //    class Access_student
-    //    {
-    //        Student a = new Student();
-
-    //        public void Disp_details()
-    //        {
-    //            a.disp(); // public method we can access any were(access is not limited)
-    //            a.display(); //using internal keyword we can access the private function 
-    //                         //			can be accessed from the same program file and not from outside the program file.
-
-    //        }
-
-    //        public void Assign_det()
-    //        {
-    //            a.Assign_dtls();
-    //        }
-
-    //        private static void Main(string[] args)
-    //        {
-    //            Access_student stud = new Access_student();
-    //            stud.Assign_det();
-    //            stud.Disp_details();
-    //        }
-
-    //    }
-    //}
-
-    ////				Inheritence
+        protected internal void Di() { }
+        //[STAThread]
+        //private static void Main(string[] args)
+        //{
+        //    //Student stu = new Student();
+        //    //stu.Assign_dtls();
+        //    //stu.disp();
+        //    //stu.display();
+        //    //with in the class it will work but outside the class it will not work because it is private.
+        //}
+    }
 
 
-    //	Single Inheritence
 
-    //class Car
-    //{
-    //    string ModelNumber;
-    //    string CarCategory;
-    //    string CarMake;
-    //    string CarName;
+    class Access_student
+    {
+        Student a = new Student();
 
-    //    public void SetCarDetails(string modelNo, string carCat, string carMake, string carName)
-    //    {
-    //        this.ModelNumber = modelNo;
-    //        this.CarCategory = carCat;
-    //        this.CarMake = carMake;
-    //        this.CarName = carName;
-    //    }
+        public void Disp_details()
+        {
+            a.disp(); // public method we can access any were(access is not limited)
+            a.display(); //using internal keyword we can access the private function 
+                         //			can be accessed from the same program file and not from outside the program file.
 
-    //    public void GetCarDetails()
-    //    {
-    //        Console.WriteLine("{0},{1},{2},{3}", ModelNumber, CarCategory, CarMake, CarName);
-    //    }
-    //}
+        }
 
-    //class Maruthi : Car
-    //{
-    //    public void GetMaruthiCarDetails()
-    //    {
-    //        GetCarDetails();
-    //    }
+        public void Assign_det()
+        {
+            a.Assign_dtls();
+        }
 
-    //    static void Main(string[] a)
-    //    {
-    //        Maruthi maruti = new Maruthi();
-    //        maruti.SetCarDetails("ALTO LXI", "HATCH BACK", "MARUTI", "ALTO");
-    //        maruti.GetCarDetails();
-    //        Console.ReadLine();
-    //    }
-    //}
+        private static void Main(string[] args)
+        {
+            Access_student stud = new Access_student();
+            stud.Assign_det();
+            stud.Disp_details();
+        }
 
-    //    internal class pcp
-    //    {
-    //        private int dos, msoffice, foxpro;
+    }
+}
 
-    //        public void pcp_get_fees()
-    //        {
+////				Inheritence
 
-    //            Console.Write("Enter the fees amount for Dos :");
-    //            dos = Int32.Parse(Console.ReadLine());
-    //            Console.Write("Enter the fees amount for msoffice :");
-    //            msoffice = Int32.Parse(Console.ReadLine());
-    //            Console.Write("Enter the fees amount for foxpro :");
-    //            foxpro = Int32.Parse(Console.ReadLine());
-    //        }
 
-    //        public void pcp_list_fees()
-    //        {
+//	Single Inheritence
 
-    //            Console.WriteLine("Dos : {0}", dos);
-    //            Console.WriteLine("MsOffice : {0}", msoffice);
-    //            Console.WriteLine("Foxpro : {0}", foxpro);
-    //        }
+//class Car
+//{
+//    string ModelNumber;
+//    string CarCategory;
+//    string CarMake;
+//    string CarName;
 
-    //    }
+//    public void SetCarDetails(string modelNo, string carCat, string carMake, string carName)
+//    {
+//        this.ModelNumber = modelNo;
+//        this.CarCategory = carCat;
+//        this.CarMake = carMake;
+//        this.CarName = carName;
+//    }
 
-    //    internal class hdca : pcp
-    //    {
-    //        private int unix, c, cplus;
+//    public void GetCarDetails()
+//    {
+//        Console.WriteLine("{0},{1},{2},{3}", ModelNumber, CarCategory, CarMake, CarName);
+//    }
+//}
 
-    //        public void hdca_get_fees()
-    //        {
-    //            pcp_get_fees();
-    //            Console.Write("Enter the fees amount for Unix :");
-    //            unix = Int32.Parse(Console.ReadLine());
-    //            Console.Write("Enter the fees amount for C :");
-    //            c = Int32.Parse(Console.ReadLine());
-    //            Console.Write("Enter the fees amount for Cplus :");
-    //            cplus = Int32.Parse(Console.ReadLine());
-    //        }
+//class Maruthi : Car
+//{
+//    public void GetMaruthiCarDetails()
+//    {
+//        GetCarDetails();
+//    }
 
-    //        public void hdca_list_fees()
-    //        {
-    //            pcp_list_fees();
-    //            Console.WriteLine("Unix : {0}", unix);
-    //            Console.WriteLine("C : {0}", c);
-    //            Console.WriteLine("C++ : {0}", cplus);
-    //        }
-    //    }
+//    static void Main(string[] a)
+//    {
+//        Maruthi maruti = new Maruthi();
+//        maruti.SetCarDetails("ALTO LXI", "HATCH BACK", "MARUTI", "ALTO");
+//        maruti.GetCarDetails();
+//        Console.ReadLine();
+//    }
+//}
 
-    //    internal class Course
-    //    {
-    //        private static void Main(string[] args)
-    //        {
-    //            //Console.Write("Enter the fees for PCP \n");
+//    internal class pcp
+//    {
+//        private int dos, msoffice, foxpro;
 
-    //            pcp p;
-    //            p = new pcp();
-    //            p.pcp_get_fees();
-    //            Console.Write("Enter the fees for hdca \n");
-    //            hdca h = new hdca();
-    //            h.hdca_get_fees();
-    //            Console.WriteLine("\n The Output ");
-    //            Console.Write("The fees Details for PCP \n");
-    //            p.pcp_list_fees();
-    //            Console.Write("The fees Details for HDCA \n");
-    //            h.hdca_list_fees();
-    //            Console.ReadLine();
-    //        }
-    //    }
-    //}
+//        public void pcp_get_fees()
+//        {
 
-    //--------------------------------------
-    internal class Base
+//            Console.Write("Enter the fees amount for Dos :");
+//            dos = Int32.Parse(Console.ReadLine());
+//            Console.Write("Enter the fees amount for msoffice :");
+//            msoffice = Int32.Parse(Console.ReadLine());
+//            Console.Write("Enter the fees amount for foxpro :");
+//            foxpro = Int32.Parse(Console.ReadLine());
+//        }
+
+//        public void pcp_list_fees()
+//        {
+
+//            Console.WriteLine("Dos : {0}", dos);
+//            Console.WriteLine("MsOffice : {0}", msoffice);
+//            Console.WriteLine("Foxpro : {0}", foxpro);
+//        }
+
+//    }
+
+//    internal class hdca : pcp
+//    {
+//        private int unix, c, cplus;
+
+//        public void hdca_get_fees()
+//        {
+//            pcp_get_fees();
+//            Console.Write("Enter the fees amount for Unix :");
+//            unix = Int32.Parse(Console.ReadLine());
+//            Console.Write("Enter the fees amount for C :");
+//            c = Int32.Parse(Console.ReadLine());
+//            Console.Write("Enter the fees amount for Cplus :");
+//            cplus = Int32.Parse(Console.ReadLine());
+//        }
+
+//        public void hdca_list_fees()
+//        {
+//            pcp_list_fees();
+//            Console.WriteLine("Unix : {0}", unix);
+//            Console.WriteLine("C : {0}", c);
+//            Console.WriteLine("C++ : {0}", cplus);
+//        }
+//    }
+
+//    internal class Course
+//    {
+//        private static void Main(string[] args)
+//        {
+//            //Console.Write("Enter the fees for PCP \n");
+
+//            pcp p;
+//            p = new pcp();
+//            p.pcp_get_fees();
+//            Console.Write("Enter the fees for hdca \n");
+//            hdca h = new hdca();
+//            h.hdca_get_fees();
+//            Console.WriteLine("\n The Output ");
+//            Console.Write("The fees Details for PCP \n");
+//            p.pcp_list_fees();
+//            Console.Write("The fees Details for HDCA \n");
+//            h.hdca_list_fees();
+//            Console.ReadLine();
+//        }
+//    }
+//}
+
+//--------------------------------------
+internal class Base
     {
 
         //public virtual void disp()
