@@ -16,6 +16,34 @@ Types of Parameters:
 Input Parameters = Used to take Input data.
 Out Parameters	 = Used to output multiple results from a function.
 
+Classes are a representation of realtime entity:
+Basically the Entity can be divided into three parts:
+1. Features : In case of Calculator the Features are exposed via the Properties.
+			  Properties: Used to Implement Encapsulation. It will not expose the data stored in a private variable, 
+						  rather it will expose itself.
+2. Behaviours: Behaviours are exposed via Functions. In case of Calculator, Add,Subract etc.. are the behaviours.
+3. Events	  : Events expose the instance when a change is made. For example in a Calculator pressing of the Add button is an Event.
+				In case of Human Getting thirsty is an event. In full, they will encapsulate the Behviours.
+
+In simple a Class is a blueprint of the operations and behaviours which it can expose or it can do.... It is a Type...
+What about When to Do... and Where to Do..
+This question will be answered by the object.
+An Object is an Instance of a Class. 
+In order to initialize the Class Features, there is an Initializer which we call Constructor.
+To create an object of a class, you need to call the constructor using the new keyword.
+
+For Ex: Calculator calc = new Calculator();
+This Single line can be represented as two lines:
+
+Calculator calc; Here, We are creating a Variable of Type Calculator. This is stored in Stack
+calc = new Calculator(); In this line, we create an object and store it in Heap. Then a pointer is set 
+						 between the variable in the Stack and this Object in the Heap. That is why we
+						 say object is a reference type as it is always pointing to a memory location.
+
+The object would now expose the behaviours and the functionalities based on the Acces Specifier and Access Modifier which 
+has been specified against the feature or function.
+Garbage Collector: https://www.geeksforgeeks.org/garbage-collection-in-c-sharp-dot-net-framework/
+
 09/25/2020: Access Specifiers.
 Access Specifier is used to control the Access to a field or a Method. It is used to enforce Encapsulation and Code Security 
 to ensure that you do not expose the methods which are not necessary.
