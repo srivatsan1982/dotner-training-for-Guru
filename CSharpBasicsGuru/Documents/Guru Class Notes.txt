@@ -43,3 +43,27 @@ calc = new Calculator(); In this line, we create an object and store it in Heap.
 The object would now expose the behaviours and the functionalities based on the Acces Specifier and Access Modifier which 
 has been specified against the feature or function.
 Garbage Collector: https://www.geeksforgeeks.org/garbage-collection-in-c-sharp-dot-net-framework/
+
+09/25/2020: Access Specifiers.
+Access Specifier is used to control the Access to a field or a Method. It is used to enforce Encapsulation and Code Security 
+to ensure that you do not expose the methods which are not necessary.
+
+private - The fields which are declared as private at class level are private to the Class. They can be only accessed
+		  within the class and not outside the class.
+		  By default if a field or method does not have a access specifier, it means it is private to the class.
+		  If a variable is declared inside a method, it is always private to the method. Its scope does not go beyond it
+		  and we cannot declare public fields or variables inside a method(private/public).
+
+public  - Global Access through out the solution. Like, a solution can contain multiple projects. A single Windows/Web Application
+		  and Class Libraries for writing the business logic. So any class declared in the Class Libraries as public can be accessed
+		  at places in the other projects as well.
+
+protected - Access within the class and the inheriting class within the same project. Access would not be provided outside the class or child class.
+
+internal  - Access to the class, or field or method only within the project and not outide the project.
+			By default if a class does not have an access specifier, it means it is internal.
+
+protected internal - Access within the class and the inheriting class within the project and not outside the project.
+
+Please refer the link below:
+https://stackoverflow.com/questions/614818/in-c-what-is-the-difference-between-public-private-protected-and-having-no#:~:text=public%20-%20can%20be%20access%20by,inherits%20off%20of%20the%20class.&text=Static%20means%20you%20have%20one,every%20instance%20of%20that%20class.
