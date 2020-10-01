@@ -67,3 +67,43 @@ protected internal - Access within the class and the inheriting class within the
 
 Please refer the link below:
 https://stackoverflow.com/questions/614818/in-c-what-is-the-difference-between-public-private-protected-and-having-no#:~:text=public%20-%20can%20be%20access%20by,inherits%20off%20of%20the%20class.&text=Static%20means%20you%20have%20one,every%20instance%20of%20that%20class.
+
+CI\CD Life Cycle: (Continuous Integration/Continuous Deployment)
+1. Environment : This is Environment or the Platform to test a piece of Code.
+				 Dev
+				 QA
+				 Stage
+				 Prod
+
+				Dev		=>		QA		=>		Stage		=>		Prod
+			(Dev1,Dev2)
+2. Branch and Merge:
+	Typical main/root branch by default is : Master
+	This will have the Master Copy.
+	Should never be corrupted.
+
+	All Development activities to take place in a Sub-Branch of Masster. We can name it as : develop.
+	When new Feature is Implemented, a new branch is created for it where all the development code sits.
+	When you commit to the Feature branch, the CI/CD pipeline would run and a deployment would happen in the Dev environment
+	or its Subsets.
+
+	Dev1/Dev2 (Unit Test Completed,PR Completed) => Merge the feature to develop branch => On Merge, build runs in Dev environment=>
+	Unit testing in Dev environment Completed => Promote the build to QA and inform => QA Test Completion=>
+	Code moves to Stage environment => Client UAT happens => Client UAT Completed => A release branch is prepared from develop=>
+	release branch is deployed to Prod => QA tests Prod => Success? => Merge the release branch to master => Failure => Idenntify the 
+	isssue=> Create a bugfix branch=> Complete the Bug Fix => Go through the cycle=> Create a Release branch again and release.
+
+	Namespace:
+	Namespace is a collection of logically related classes. It is used to avoid class name collision.This can be resolved by placing
+	the classes in separate namespaces and referrring to them with the namespace name. For example, we can say Math.Integration.
+	and Science.Integration where the namespace is Science and Math and Integration is the name of the class.
+
+	The above process of referring the namespace name and the class name together is called a Fully Qualified name. For ex, 
+	Science is a namespace and Integration is the class. So the class is actually referred as Science.Integration which is a fully 
+	qualified name of Integration class in Science namespace.
+
+	In order to avoid writing the fully qualified name, we can import the namespace using the using keyword. For Example, the
+	Console is actually written as System.Console. But, in order to avoid writing such a big code, we can import the System namespace
+	with the using keyword and we just can refer the class name as it is:
+	using System:
+	Console.Write();
