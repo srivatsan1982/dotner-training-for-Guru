@@ -46,10 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessNamespaceClasses.cs" />
     <Compile Include="Classes.cs" />
     <Compile Include="AccessSpecifiers.cs" />
     <Compile Include="Functions.cs" />
     <Compile Include="Loops.cs" />
+    <Compile Include="Namespaces.cs" />
     <Compile Include="Operators.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
